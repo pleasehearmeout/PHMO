@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Field, TextArea, Control, Input, Button, Label } from 'bloomer'
+import { Field, TextArea, Control, Input, Button } from 'bloomer'
 import Cleave from 'cleave.js/react'
 import TermsOfAgreement from './TermsOfAgreement'
 
@@ -44,14 +44,11 @@ const FieldGroup = styled.div`
 	padding: 0 15px 0 15px;
 `
 
-const FieldGroupStateCity = styled.div`
+const FieldGroupLocation = styled.div`
 	display: flex;
 	flex-direction: row;
+	justify-content: space-between;
 	margin-bottom: 15px;
-`
-
-const RowContainer = styled.div`
-	margin-right: 20px;
 `
 
 const FieldGroupTitle = styled.div`
@@ -78,6 +75,7 @@ class Form extends React.Component {
 			story: '',
 			city: '',
 			state: '',
+			policeDistrict: '',
 			agreed: false,
 			isModalActive: false,
 			officerName: '',
@@ -92,6 +90,7 @@ class Form extends React.Component {
 		this.onAgreementChange = this.onAgreementChange.bind(this)
 		this.onCityChange = this.onCityChange.bind(this)
 		this.onStateChange = this.onStateChange.bind(this)
+		this.onPoliceDistrictChange = this.onPoliceDistrictChange.bind(this)
 		this.onTermsClick = this.onTermsClick.bind(this)
 		this.onOfficerNameChange = this.onOfficerNameChange.bind(this)
 		this.onVictimNameChange = this.onVictimNameChange.bind(this)
@@ -129,6 +128,10 @@ class Form extends React.Component {
 		this.setState({ state: event.target.value })
 	}
 
+	onPoliceDistrictChange(event) {
+		this.setState({ policeDistrict: event.target.value })
+	}
+
 	onTermsClick() {
 		this.setState({ isModalActive: false })
 	}
@@ -159,16 +162,21 @@ class Form extends React.Component {
 						<FieldGroupLine />
 						<FieldGroup>
 							<Field>
-								<label>Full Name</label>
+								Full Name
 								<Control>
-									<Input type="text" onChange={this.onNameChange} />
+									<Input
+										type="text"
+										placeholder="First Last"
+										onChange={this.onNameChange}
+									/>
 								</Control>
 							</Field>
 							<Field>
-								<label>Phone Number</label>
+								Phone Number
 								<Control>
 									<Cleave
 										className="input"
+										placeholder="XXX XXX XXXX"
 										options={{
 											blocks: [3, 3, 4],
 											delimeter: ' ',
@@ -179,9 +187,13 @@ class Form extends React.Component {
 								</Control>
 							</Field>
 							<Field>
-								<label>Email</label>
+								Email
 								<Control>
-									<Input type="text" onChange={this.onEmailChange} />
+									<Input
+										type="text"
+										placeholder="youremail@gmail.com"
+										onChange={this.onEmailChange}
+									/>
 								</Control>
 							</Field>
 						</FieldGroup>
@@ -190,7 +202,7 @@ class Form extends React.Component {
 						<FieldGroupLine />
 						<FieldGroup>
 							<Field>
-								<label>Incident Date</label>
+								Incident Date
 								<Control>
 									<Cleave
 										className="input"
@@ -200,38 +212,50 @@ class Form extends React.Component {
 									/>
 								</Control>
 							</Field>
-							<FieldGroupStateCity>
-								<RowContainer>
-									<label>State</label>
+							<FieldGroupLocation>
+								<div>
+									State
 									<Field>
 										<Control>
 											<Input type="text" onChange={this.onStateChange} />
 										</Control>
 									</Field>
-								</RowContainer>
+								</div>
 								<div>
-									<label>City</label>
+									City
 									<Field>
 										<Control>
 											<Input type="text" onChange={this.onCityChange} />
 										</Control>
 									</Field>
 								</div>
-							</FieldGroupStateCity>
-							<label>Officer Name - optional</label>
+								<div>
+									Police District
+									<Field>
+										<Control>
+											<Input
+												type="text"
+												placeholder="ex. 2nd, 6th etc."
+												onChange={this.onPoliceDistrictChange}
+											/>
+										</Control>
+									</Field>
+								</div>
+							</FieldGroupLocation>
+							Officer Name
 							<Field>
 								<Control>
 									<Input type="text" onChange={this.onOfficerNameChange} />
 								</Control>
 							</Field>
-							<label>Victim Name - optional</label>
+							Victim Name
 							<Field>
 								<Control>
 									<Input type="text" onChange={this.onVictimNameChange} />
 								</Control>
 							</Field>
 							<Field>
-								<label>The Story</label>
+								The Story
 								<Control>
 									<TextArea
 										placeholder={'Tell us more about what happened...'}
