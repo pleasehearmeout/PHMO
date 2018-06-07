@@ -6,42 +6,45 @@ import 'font-awesome/css/font-awesome.css'
 import './all.sass'
 
 import {
-  Container,
-  Hero,
-  HeroHeader,
-  HeroBody,
-  HeroFooter,
-  Tabs,
-  TabList,
-  Tab,
-  TabLink,
+	Container,
+	Hero,
+	HeroHeader,
+	HeroBody,
+	HeroFooter,
+	Tabs,
+	TabList,
+	Tab,
+	TabLink
 } from 'bloomer'
 import AppHeader from '../components/Header'
 import AppFooter from '../components/Footer'
 import styled from 'styled-components'
 
 const StyledTitleWrapper = styled.div`
-  font-family: 'open sans';
+	font-family: 'open sans';
+`
+
+const StyledHeroBody = styled.div`
+	padding: 80px 0 80px 0;
 `
 
 const TemplateWrapper = ({ children }) => (
-  <StyledTitleWrapper>
-    <Helmet title="Please Hear Me Out" />
-    <Hero isFullHeight isColor="dark" isSize="large">
-      <HeroHeader>
-        <AppHeader />
-      </HeroHeader>
+	<StyledTitleWrapper>
+		<Helmet title="Please Hear Me Out" />
+		<Hero isFullHeight isColor="dark" isSize="large">
+			<HeroHeader>
+				<AppHeader />
+			</HeroHeader>
 
-      <HeroBody>{children()}</HeroBody>
-
-      <HeroFooter />
-    </Hero>
-    <AppFooter />
-  </StyledTitleWrapper>
+			<StyledHeroBody>{children()}</StyledHeroBody>
+			<HeroFooter />
+		</Hero>
+		<AppFooter />
+	</StyledTitleWrapper>
 )
 
 TemplateWrapper.propTypes = {
-  children: PropTypes.func,
+	children: PropTypes.func
 }
 
 export default TemplateWrapper
