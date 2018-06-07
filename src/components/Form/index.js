@@ -44,6 +44,16 @@ const FieldGroup = styled.div`
 	padding: 0 15px 0 15px;
 `
 
+const FieldGroupStateCity = styled.div`
+	display: flex;
+	flex-direction: row;
+	margin-bottom: 15px;
+`
+
+const RowContainer = styled.div`
+	margin-right: 20px;
+`
+
 const FieldGroupTitle = styled.div`
 	font-size: 25px;
 	margin: 0 0 5px 0;
@@ -190,18 +200,24 @@ class Form extends React.Component {
 									/>
 								</Control>
 							</Field>
-							<label>State</label>
-							<Field>
-								<Control>
-									<Input type="text" onChange={this.onStateChange} />
-								</Control>
-							</Field>
-							<label>City</label>
-							<Field>
-								<Control>
-									<Input type="text" onChange={this.onCityChange} />
-								</Control>
-							</Field>
+							<FieldGroupStateCity>
+								<RowContainer>
+									<label>State</label>
+									<Field>
+										<Control>
+											<Input type="text" onChange={this.onStateChange} />
+										</Control>
+									</Field>
+								</RowContainer>
+								<div>
+									<label>City</label>
+									<Field>
+										<Control>
+											<Input type="text" onChange={this.onCityChange} />
+										</Control>
+									</Field>
+								</div>
+							</FieldGroupStateCity>
 							<label>Officer Name - optional</label>
 							<Field>
 								<Control>
