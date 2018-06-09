@@ -158,10 +158,10 @@ class Form extends React.Component {
 						isModalActive={this.state.isModalActive}
 					/>
 					<form
-						method="post"
+						name="report-form"
+						method="POST"
 						data-netlify="true"
 						data-netlify-honeypot="bot-field"
-						action="#"
 					>
 						<FieldGroupTitle>Contact Info</FieldGroupTitle>
 						<FieldGroupLine />

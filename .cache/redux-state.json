@@ -1,13 +1,22 @@
 {
   "nodes": {
     "SitePage /dev-404-page/": {
+      "layout": "index",
+      "jsonName": "dev-404-page.json",
+      "internalComponentName": "ComponentDev404Page",
       "path": "/dev-404-page/",
+      "component": "/Users/ellalee/Workspace_projs/phmo/.cache/dev-404-page.js",
+      "componentChunkName": "component---cache-dev-404-page-js",
+      "context": {},
+      "pluginCreator___NODE": "Plugin dev-404-page",
+      "pluginCreatorId": "Plugin dev-404-page",
+      "componentPath": "/Users/ellalee/Workspace_projs/phmo/.cache/dev-404-page.js",
       "id": "SitePage /dev-404-page/",
       "parent": "SOURCE",
       "children": [],
       "internal": {
         "type": "SitePage",
-        "contentDigest": "f91d29e10ba680b413138cf9ed86e655",
+        "contentDigest": "40ce9634b65d16c9f44258b5435e6020",
         "owner": "internal-data-bridge"
       }
     },
@@ -523,14 +532,16 @@
       "siteMetadata": {
         "title": "Gatsby Default Starter"
       },
+      "port": "8000",
+      "host": "localhost",
       "pathPrefix": "",
       "polyfill": true,
-      "buildTime": "2018-06-09T21:06:18.366Z",
+      "buildTime": "2018-06-09T20:59:54.774Z",
       "id": "Site",
       "parent": "SOURCE",
       "children": [],
       "internal": {
-        "contentDigest": "0c7d03b7d985597450bde0872255255d",
+        "contentDigest": "acb41d833420918e0885b8ebb3565590",
         "type": "Site",
         "owner": "internal-data-bridge"
       }
@@ -551,7 +562,7 @@
       "children": [],
       "internal": {
         "type": "SitePage",
-        "contentDigest": "81cc7a7a29b21766ab3c41a6b745d9be",
+        "contentDigest": "2aab73e70009bc1485f21335c02ecc28",
         "owner": "internal-data-bridge"
       }
     },
@@ -571,7 +582,7 @@
       "children": [],
       "internal": {
         "type": "SitePage",
-        "contentDigest": "9d93487abe8250eb4418f43ae97b22c9",
+        "contentDigest": "6531cb26bc0a9399238e2897bb376c15",
         "owner": "internal-data-bridge"
       }
     },
@@ -591,7 +602,7 @@
       "children": [],
       "internal": {
         "type": "SitePage",
-        "contentDigest": "fb2234eba1163aed55a2aa215fa12921",
+        "contentDigest": "a1e852b50037fff5ce2b30c5e40f05f3",
         "owner": "internal-data-bridge"
       }
     },
@@ -611,7 +622,7 @@
       "children": [],
       "internal": {
         "type": "SitePage",
-        "contentDigest": "f0a92c93c26debfe44d6afbb5ce56b20",
+        "contentDigest": "e5b85c66fe5d23097f5474ef9adda82b",
         "owner": "internal-data-bridge"
       }
     },
@@ -631,7 +642,27 @@
       "children": [],
       "internal": {
         "type": "SitePage",
-        "contentDigest": "d7a0109e711f8fd91a3b4fcc44e99043",
+        "contentDigest": "804230f5bde54d604f9fffde36254bc4",
+        "owner": "internal-data-bridge"
+      }
+    },
+    "SitePage /success/": {
+      "layout": "index",
+      "jsonName": "success.json",
+      "internalComponentName": "ComponentSuccess",
+      "path": "/success/",
+      "component": "/Users/ellalee/Workspace_projs/phmo/src/pages/success.js",
+      "componentChunkName": "component---src-pages-success-js",
+      "context": {},
+      "pluginCreator___NODE": "Plugin component-page-creator",
+      "pluginCreatorId": "Plugin component-page-creator",
+      "componentPath": "/Users/ellalee/Workspace_projs/phmo/src/pages/success.js",
+      "id": "SitePage /success/",
+      "parent": "SOURCE",
+      "children": [],
+      "internal": {
+        "type": "SitePage",
+        "contentDigest": "53d26983224d5771bbc140edb0ee7d02",
         "owner": "internal-data-bridge"
       }
     }
