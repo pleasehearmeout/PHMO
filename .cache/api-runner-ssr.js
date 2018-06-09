@@ -1,8 +1,8 @@
 var plugins = [{
-      plugin: require('/Users/jaehoonlee/phmo/node_modules/gatsby-plugin-react-helmet/gatsby-ssr.js'),
+      plugin: require('/Users/ellalee/Workspace_projs/phmo/node_modules/gatsby-plugin-react-helmet/gatsby-ssr.js'),
       options: {"plugins":[]},
     },{
-      plugin: require('/Users/jaehoonlee/phmo/node_modules/gatsby-plugin-google-fonts/gatsby-ssr.js'),
+      plugin: require('/Users/ellalee/Workspace_projs/phmo/node_modules/gatsby-plugin-google-fonts/gatsby-ssr.js'),
       options: {"plugins":[],"fonts":["open sans","vollkorn"]},
     }]
 // During bootstrap, we write requires at top of this file which looks like:

@@ -5,23 +5,23 @@
       "jsonName": "dev-404-page.json",
       "internalComponentName": "ComponentDev404Page",
       "path": "/dev-404-page/",
-      "component": "/Users/jaehoonlee/phmo/.cache/dev-404-page.js",
+      "component": "/Users/ellalee/Workspace_projs/phmo/.cache/dev-404-page.js",
       "componentChunkName": "component---cache-dev-404-page-js",
       "context": {},
       "pluginCreator___NODE": "Plugin dev-404-page",
       "pluginCreatorId": "Plugin dev-404-page",
-      "componentPath": "/Users/jaehoonlee/phmo/.cache/dev-404-page.js",
+      "componentPath": "/Users/ellalee/Workspace_projs/phmo/.cache/dev-404-page.js",
       "id": "SitePage /dev-404-page/",
       "parent": "SOURCE",
       "children": [],
       "internal": {
         "type": "SitePage",
-        "contentDigest": "328c19b4b143ad2bae2117dcf7022bf2",
+        "contentDigest": "c109f90ec7daa6ab7fa120f400cff637",
         "owner": "internal-data-bridge"
       }
     },
     "Plugin dev-404-page": {
-      "resolve": "/Users/jaehoonlee/phmo/node_modules/gatsby/dist/internal-plugins/dev-404-page",
+      "resolve": "/Users/ellalee/Workspace_projs/phmo/node_modules/gatsby/dist/internal-plugins/dev-404-page",
       "id": "Plugin dev-404-page",
       "name": "dev-404-page",
       "version": "1.0.0",
@@ -33,7 +33,7 @@
       ],
       "browserAPIs": [],
       "ssrAPIs": [],
-      "pluginFilepath": "/Users/jaehoonlee/phmo/node_modules/gatsby/dist/internal-plugins/dev-404-page",
+      "pluginFilepath": "/Users/ellalee/Workspace_projs/phmo/node_modules/gatsby/dist/internal-plugins/dev-404-page",
       "packageJson": {
         "name": "dev-404-page",
         "description": "Internal plugin to add a 404 page in development with helpful information",
@@ -50,13 +50,13 @@
       "parent": "SOURCE",
       "children": [],
       "internal": {
-        "contentDigest": "4c7f60da3ff043fc8bec3edc868f3675",
+        "contentDigest": "a001e0ecef319658adf9932defc06607",
         "type": "SitePlugin",
         "owner": "internal-data-bridge"
       }
     },
     "Plugin component-page-creator": {
-      "resolve": "/Users/jaehoonlee/phmo/node_modules/gatsby/dist/internal-plugins/component-page-creator",
+      "resolve": "/Users/ellalee/Workspace_projs/phmo/node_modules/gatsby/dist/internal-plugins/component-page-creator",
       "id": "Plugin component-page-creator",
       "name": "component-page-creator",
       "version": "1.0.0",
@@ -68,7 +68,7 @@
       ],
       "browserAPIs": [],
       "ssrAPIs": [],
-      "pluginFilepath": "/Users/jaehoonlee/phmo/node_modules/gatsby/dist/internal-plugins/component-page-creator",
+      "pluginFilepath": "/Users/ellalee/Workspace_projs/phmo/node_modules/gatsby/dist/internal-plugins/component-page-creator",
       "packageJson": {
         "name": "component-page-creator",
         "description": "An internal Gatsby plugin that creates pages from component files in src/pages",
@@ -89,13 +89,13 @@
       "parent": "SOURCE",
       "children": [],
       "internal": {
-        "contentDigest": "3cabc0e9c568f9dad279bb0a3f251cf5",
+        "contentDigest": "30645031bb5c0a7d87752021d20e8a1e",
         "type": "SitePlugin",
         "owner": "internal-data-bridge"
       }
     },
     "Plugin component-layout-creator": {
-      "resolve": "/Users/jaehoonlee/phmo/node_modules/gatsby/dist/internal-plugins/component-layout-creator",
+      "resolve": "/Users/ellalee/Workspace_projs/phmo/node_modules/gatsby/dist/internal-plugins/component-layout-creator",
       "id": "Plugin component-layout-creator",
       "name": "component-layout-creator",
       "version": "1.0.0",
@@ -107,7 +107,7 @@
       ],
       "browserAPIs": [],
       "ssrAPIs": [],
-      "pluginFilepath": "/Users/jaehoonlee/phmo/node_modules/gatsby/dist/internal-plugins/component-layout-creator",
+      "pluginFilepath": "/Users/ellalee/Workspace_projs/phmo/node_modules/gatsby/dist/internal-plugins/component-layout-creator",
       "packageJson": {
         "name": "component-layout-creator",
         "description": "An internal Gatsby plugin that creates pages from component files in src/layouts",
@@ -128,13 +128,13 @@
       "parent": "SOURCE",
       "children": [],
       "internal": {
-        "contentDigest": "c8c3aa03a8c0ebce8e827d390441ec6e",
+        "contentDigest": "123665bd1bfbb65747833044332246f3",
         "type": "SitePlugin",
         "owner": "internal-data-bridge"
       }
     },
     "Plugin internal-data-bridge": {
-      "resolve": "/Users/jaehoonlee/phmo/node_modules/gatsby/dist/internal-plugins/internal-data-bridge",
+      "resolve": "/Users/ellalee/Workspace_projs/phmo/node_modules/gatsby/dist/internal-plugins/internal-data-bridge",
       "id": "Plugin internal-data-bridge",
       "name": "internal-data-bridge",
       "version": "1.0.0",
@@ -147,7 +147,7 @@
       ],
       "browserAPIs": [],
       "ssrAPIs": [],
-      "pluginFilepath": "/Users/jaehoonlee/phmo/node_modules/gatsby/dist/internal-plugins/internal-data-bridge",
+      "pluginFilepath": "/Users/ellalee/Workspace_projs/phmo/node_modules/gatsby/dist/internal-plugins/internal-data-bridge",
       "packageJson": {
         "name": "internal-data-bridge",
         "description": "An internal Gatsby plugin which creates data nodes from internal data",
@@ -164,13 +164,13 @@
       "parent": "SOURCE",
       "children": [],
       "internal": {
-        "contentDigest": "fc20a525ea0f4d5e090c60ee4394a952",
+        "contentDigest": "b9ab6a2a66e135ca57bd133b91cc33ef",
         "type": "SitePlugin",
         "owner": "internal-data-bridge"
       }
     },
     "Plugin prod-404": {
-      "resolve": "/Users/jaehoonlee/phmo/node_modules/gatsby/dist/internal-plugins/prod-404",
+      "resolve": "/Users/ellalee/Workspace_projs/phmo/node_modules/gatsby/dist/internal-plugins/prod-404",
       "id": "Plugin prod-404",
       "name": "prod-404",
       "version": "1.0.0",
@@ -182,7 +182,7 @@
       ],
       "browserAPIs": [],
       "ssrAPIs": [],
-      "pluginFilepath": "/Users/jaehoonlee/phmo/node_modules/gatsby/dist/internal-plugins/prod-404",
+      "pluginFilepath": "/Users/ellalee/Workspace_projs/phmo/node_modules/gatsby/dist/internal-plugins/prod-404",
       "packageJson": {
         "name": "prod-404",
         "description": "Internal plugin to detect various flavors of 404 pages and ensure there's a 404.html path created as well to ensure compatability with static hosts",
@@ -199,13 +199,13 @@
       "parent": "SOURCE",
       "children": [],
       "internal": {
-        "contentDigest": "d09933e1732190875d46fc96c9ba0795",
+        "contentDigest": "56c80069bada519d492a4c98eb7a3217",
         "type": "SitePlugin",
         "owner": "internal-data-bridge"
       }
     },
     "Plugin query-runner": {
-      "resolve": "/Users/jaehoonlee/phmo/node_modules/gatsby/dist/internal-plugins/query-runner",
+      "resolve": "/Users/ellalee/Workspace_projs/phmo/node_modules/gatsby/dist/internal-plugins/query-runner",
       "id": "Plugin query-runner",
       "name": "query-runner",
       "version": "1.0.0",
@@ -218,7 +218,7 @@
       ],
       "browserAPIs": [],
       "ssrAPIs": [],
-      "pluginFilepath": "/Users/jaehoonlee/phmo/node_modules/gatsby/dist/internal-plugins/query-runner",
+      "pluginFilepath": "/Users/ellalee/Workspace_projs/phmo/node_modules/gatsby/dist/internal-plugins/query-runner",
       "packageJson": {
         "name": "query-runner",
         "description": "Internal plugin for running queries",
@@ -235,13 +235,13 @@
       "parent": "SOURCE",
       "children": [],
       "internal": {
-        "contentDigest": "799515d74185b1425fd907577b1ee57b",
+        "contentDigest": "4144d9f1470f4c7e75f1f406f4365b2a",
         "type": "SitePlugin",
         "owner": "internal-data-bridge"
       }
     },
     "Plugin gatsby-plugin-react-helmet": {
-      "resolve": "/Users/jaehoonlee/phmo/node_modules/gatsby-plugin-react-helmet",
+      "resolve": "/Users/ellalee/Workspace_projs/phmo/node_modules/gatsby-plugin-react-helmet",
       "id": "Plugin gatsby-plugin-react-helmet",
       "name": "gatsby-plugin-react-helmet",
       "version": "2.0.8",
@@ -253,7 +253,7 @@
       "ssrAPIs": [
         "onRenderBody"
       ],
-      "pluginFilepath": "/Users/jaehoonlee/phmo/node_modules/gatsby-plugin-react-helmet",
+      "pluginFilepath": "/Users/ellalee/Workspace_projs/phmo/node_modules/gatsby-plugin-react-helmet",
       "packageJson": {
         "name": "gatsby-plugin-react-helmet",
         "description": "Provides drop-in support for server rendering data added with react-helmet",
@@ -300,13 +300,13 @@
       "parent": "SOURCE",
       "children": [],
       "internal": {
-        "contentDigest": "3251e6d550214844ad3aca18b4701df4",
+        "contentDigest": "b205ae4dfeb11dcd103715aa97f5a450",
         "type": "SitePlugin",
         "owner": "internal-data-bridge"
       }
     },
     "Plugin gatsby-plugin-sass": {
-      "resolve": "/Users/jaehoonlee/phmo/node_modules/gatsby-plugin-sass",
+      "resolve": "/Users/ellalee/Workspace_projs/phmo/node_modules/gatsby-plugin-sass",
       "id": "Plugin gatsby-plugin-sass",
       "name": "gatsby-plugin-sass",
       "version": "1.0.19",
@@ -318,7 +318,7 @@
       ],
       "browserAPIs": [],
       "ssrAPIs": [],
-      "pluginFilepath": "/Users/jaehoonlee/phmo/node_modules/gatsby-plugin-sass",
+      "pluginFilepath": "/Users/ellalee/Workspace_projs/phmo/node_modules/gatsby-plugin-sass",
       "packageJson": {
         "name": "gatsby-plugin-sass",
         "description": "Gatsby plugin to handle scss/sass files",
@@ -383,13 +383,13 @@
       "parent": "SOURCE",
       "children": [],
       "internal": {
-        "contentDigest": "5e1a218ed33c1b49ee6fd00e169037f3",
+        "contentDigest": "edf07792090c469723e339ebb49eda8e",
         "type": "SitePlugin",
         "owner": "internal-data-bridge"
       }
     },
     "Plugin gatsby-plugin-google-fonts": {
-      "resolve": "/Users/jaehoonlee/phmo/node_modules/gatsby-plugin-google-fonts",
+      "resolve": "/Users/ellalee/Workspace_projs/phmo/node_modules/gatsby-plugin-google-fonts",
       "id": "Plugin gatsby-plugin-google-fonts",
       "name": "gatsby-plugin-google-fonts",
       "version": "0.0.4",
@@ -405,7 +405,7 @@
       "ssrAPIs": [
         "onRenderBody"
       ],
-      "pluginFilepath": "/Users/jaehoonlee/phmo/node_modules/gatsby-plugin-google-fonts",
+      "pluginFilepath": "/Users/ellalee/Workspace_projs/phmo/node_modules/gatsby-plugin-google-fonts",
       "packageJson": {
         "name": "gatsby-plugin-google-fonts",
         "description": "Bring Google Fonts to Gatsby",
@@ -432,13 +432,13 @@
       "parent": "SOURCE",
       "children": [],
       "internal": {
-        "contentDigest": "5b5df25cd0124f3d168911b2e472962c",
+        "contentDigest": "cb26c6e325b7a6dcf211f27d2a7da8d8",
         "type": "SitePlugin",
         "owner": "internal-data-bridge"
       }
     },
     "Plugin default-site-plugin": {
-      "resolve": "/Users/jaehoonlee/phmo",
+      "resolve": "/Users/ellalee/Workspace_projs/phmo",
       "id": "Plugin default-site-plugin",
       "name": "default-site-plugin",
       "version": "97e87203517781716a1754903688d321",
@@ -448,7 +448,7 @@
       "nodeAPIs": [],
       "browserAPIs": [],
       "ssrAPIs": [],
-      "pluginFilepath": "/Users/jaehoonlee/phmo",
+      "pluginFilepath": "/Users/ellalee/Workspace_projs/phmo",
       "packageJson": {
         "name": "synonymes-app",
         "description": "Synonymes App",
@@ -517,7 +517,7 @@
       "parent": "SOURCE",
       "children": [],
       "internal": {
-        "contentDigest": "f76e139a8c2febf9c64a0a0217f6a18c",
+        "contentDigest": "ce3314d4dcaa4700254876ff8fb335f3",
         "type": "SitePlugin",
         "owner": "internal-data-bridge"
       }
@@ -530,12 +530,12 @@
       "host": "localhost",
       "pathPrefix": "",
       "polyfill": true,
-      "buildTime": "2018-06-05T18:12:11.689Z",
+      "buildTime": "2018-06-09T18:00:59.986Z",
       "id": "Site",
       "parent": "SOURCE",
       "children": [],
       "internal": {
-        "contentDigest": "65c8ab363c6ac84dfc9b82cba2aed454",
+        "contentDigest": "277d4fb3551b77315df130bfd2e0858f",
         "type": "Site",
         "owner": "internal-data-bridge"
       }
@@ -545,18 +545,18 @@
       "jsonName": "404.json",
       "internalComponentName": "Component404",
       "path": "/404/",
-      "component": "/Users/jaehoonlee/phmo/src/pages/404.js",
+      "component": "/Users/ellalee/Workspace_projs/phmo/src/pages/404.js",
       "componentChunkName": "component---src-pages-404-js",
       "context": {},
       "pluginCreator___NODE": "Plugin component-page-creator",
       "pluginCreatorId": "Plugin component-page-creator",
-      "componentPath": "/Users/jaehoonlee/phmo/src/pages/404.js",
+      "componentPath": "/Users/ellalee/Workspace_projs/phmo/src/pages/404.js",
       "id": "SitePage /404/",
       "parent": "SOURCE",
       "children": [],
       "internal": {
         "type": "SitePage",
-        "contentDigest": "64de3c15fe7b1a0d8fae825a12edd645",
+        "contentDigest": "cb1cdc2f869c00a19d32818a9219f9a9",
         "owner": "internal-data-bridge"
       }
     },
@@ -565,18 +565,18 @@
       "jsonName": "about.json",
       "internalComponentName": "ComponentAbout",
       "path": "/about/",
-      "component": "/Users/jaehoonlee/phmo/src/pages/about.js",
+      "component": "/Users/ellalee/Workspace_projs/phmo/src/pages/about.js",
       "componentChunkName": "component---src-pages-about-js",
       "context": {},
       "pluginCreator___NODE": "Plugin component-page-creator",
       "pluginCreatorId": "Plugin component-page-creator",
-      "componentPath": "/Users/jaehoonlee/phmo/src/pages/about.js",
+      "componentPath": "/Users/ellalee/Workspace_projs/phmo/src/pages/about.js",
       "id": "SitePage /about/",
       "parent": "SOURCE",
       "children": [],
       "internal": {
         "type": "SitePage",
-        "contentDigest": "80ff1b98d81d1123974c68234a7588dc",
+        "contentDigest": "642f634b86e2d4172c0f3024ed01117a",
         "owner": "internal-data-bridge"
       }
     },
@@ -585,18 +585,18 @@
       "jsonName": "index.json",
       "internalComponentName": "ComponentIndex",
       "path": "/",
-      "component": "/Users/jaehoonlee/phmo/src/pages/index.js",
+      "component": "/Users/ellalee/Workspace_projs/phmo/src/pages/index.js",
       "componentChunkName": "component---src-pages-index-js",
       "context": {},
       "pluginCreator___NODE": "Plugin component-page-creator",
       "pluginCreatorId": "Plugin component-page-creator",
-      "componentPath": "/Users/jaehoonlee/phmo/src/pages/index.js",
+      "componentPath": "/Users/ellalee/Workspace_projs/phmo/src/pages/index.js",
       "id": "SitePage /",
       "parent": "SOURCE",
       "children": [],
       "internal": {
         "type": "SitePage",
-        "contentDigest": "d79730540b171ad069ff815f9af5b125",
+        "contentDigest": "95ba3d579479845cbff9a4eec572e3bd",
         "owner": "internal-data-bridge"
       }
     },
@@ -605,18 +605,18 @@
       "jsonName": "page-2.json",
       "internalComponentName": "ComponentPage2",
       "path": "/page-2/",
-      "component": "/Users/jaehoonlee/phmo/src/pages/page-2.js",
+      "component": "/Users/ellalee/Workspace_projs/phmo/src/pages/page-2.js",
       "componentChunkName": "component---src-pages-page-2-js",
       "context": {},
       "pluginCreator___NODE": "Plugin component-page-creator",
       "pluginCreatorId": "Plugin component-page-creator",
-      "componentPath": "/Users/jaehoonlee/phmo/src/pages/page-2.js",
+      "componentPath": "/Users/ellalee/Workspace_projs/phmo/src/pages/page-2.js",
       "id": "SitePage /page-2/",
       "parent": "SOURCE",
       "children": [],
       "internal": {
         "type": "SitePage",
-        "contentDigest": "97fb66008861c1666167e70d10166e42",
+        "contentDigest": "4fec66614b34be1c4a7d271a113fc3d3",
         "owner": "internal-data-bridge"
       }
     },
@@ -625,18 +625,18 @@
       "jsonName": "404-html.json",
       "internalComponentName": "Component404Html",
       "path": "/404.html",
-      "component": "/Users/jaehoonlee/phmo/src/pages/404.js",
+      "component": "/Users/ellalee/Workspace_projs/phmo/src/pages/404.js",
       "componentChunkName": "component---src-pages-404-js",
       "context": {},
       "pluginCreator___NODE": "Plugin prod-404",
       "pluginCreatorId": "Plugin prod-404",
-      "componentPath": "/Users/jaehoonlee/phmo/src/pages/404.js",
+      "componentPath": "/Users/ellalee/Workspace_projs/phmo/src/pages/404.js",
       "id": "SitePage /404.html",
       "parent": "SOURCE",
       "children": [],
       "internal": {
         "type": "SitePage",
-        "contentDigest": "2d00f222ad95922d7f52b15dbc4c4082",
+        "contentDigest": "5591bc775dc9a8575b71e758da3de3a2",
         "owner": "internal-data-bridge"
       }
     }

@@ -3,6 +3,8 @@ import styled from 'styled-components'
 import { Field, TextArea, Control, Input, Button } from 'bloomer'
 import Cleave from 'cleave.js/react'
 import TermsOfAgreement from './TermsOfAgreement'
+import { STATES } from './states'
+import Select from 'react-select'
 
 const StyledFormWrapper = styled.div`
 	display: flex;
@@ -47,7 +49,7 @@ const FieldGroup = styled.div`
 const FieldGroupLocation = styled.div`
 	display: flex;
 	flex-direction: row;
-	justify-content: space-between;
+	justify-content: flex-start;
 	margin-bottom: 15px;
 `
 
@@ -63,6 +65,10 @@ const FieldGroupLine = styled.div`
 	margin-bottom: 8px;
 `
 
+const StyledSelect = styled(Select)`
+	width: 200px;
+`
+
 class Form extends React.Component {
 	constructor(props) {
 		super(props)
@@ -74,12 +80,11 @@ class Form extends React.Component {
 			date: '',
 			story: '',
 			city: '',
-			state: '',
+			selectedState: '',
 			policeDistrict: '',
 			agreed: false,
 			isModalActive: false,
-			officerName: '',
-			victimName: ''
+			officerName: ''
 		}
 
 		this.onNameChange = this.onNameChange.bind(this)
@@ -89,11 +94,10 @@ class Form extends React.Component {
 		this.onStoryChange = this.onStoryChange.bind(this)
 		this.onAgreementChange = this.onAgreementChange.bind(this)
 		this.onCityChange = this.onCityChange.bind(this)
-		this.onStateChange = this.onStateChange.bind(this)
+		this.onSelectedStateChange = this.onSelectedStateChange.bind(this)
 		this.onPoliceDistrictChange = this.onPoliceDistrictChange.bind(this)
 		this.onTermsClick = this.onTermsClick.bind(this)
 		this.onOfficerNameChange = this.onOfficerNameChange.bind(this)
-		this.onVictimNameChange = this.onVictimNameChange.bind(this)
 	}
 
 	onNameChange(event) {
@@ -124,8 +128,11 @@ class Form extends React.Component {
 		this.setState({ city: event.target.value })
 	}
 
-	onStateChange(event) {
-		this.setState({ state: event.target.value })
+	onSelectedStateChange(newState) {
+		this.setState({ selectedState: newState })
+		if (newState) {
+			console.log(`Selected: ${newState}`)
+		}
 	}
 
 	onPoliceDistrictChange(event) {
@@ -140,11 +147,9 @@ class Form extends React.Component {
 		this.setState({ officerName: event.target.value })
 	}
 
-	onVictimNameChange(event) {
-		this.setState({ victimName: event.target.value })
-	}
-
 	render() {
+		const { selectedState } = this.state
+
 		return (
 			<StyledFormWrapper>
 				<StyledBox>
@@ -162,7 +167,7 @@ class Form extends React.Component {
 						<FieldGroupLine />
 						<FieldGroup>
 							<Field>
-								Full Name
+								<label>Full Name</label>
 								<Control>
 									<Input
 										type="text"
@@ -172,7 +177,7 @@ class Form extends React.Component {
 								</Control>
 							</Field>
 							<Field>
-								Phone Number
+								<label>Phone Number</label>
 								<Control>
 									<Cleave
 										className="input"
@@ -187,7 +192,7 @@ class Form extends React.Component {
 								</Control>
 							</Field>
 							<Field>
-								Email
+								<label>Email</label>
 								<Control>
 									<Input
 										type="text"
@@ -202,7 +207,7 @@ class Form extends React.Component {
 						<FieldGroupLine />
 						<FieldGroup>
 							<Field>
-								Incident Date
+								<label>Incident Date</label>
 								<Control>
 									<Cleave
 										className="input"
@@ -214,48 +219,50 @@ class Form extends React.Component {
 							</Field>
 							<FieldGroupLocation>
 								<div>
-									State
-									<Field>
-										<Control>
-											<Input type="text" onChange={this.onStateChange} />
-										</Control>
-									</Field>
-								</div>
-								<div>
-									City
+									<label>City</label>
 									<Field>
 										<Control>
 											<Input type="text" onChange={this.onCityChange} />
 										</Control>
 									</Field>
 								</div>
-								<div>
-									Police District
+								<FieldGroup>
+									<label>State</label>
 									<Field>
 										<Control>
-											<Input
-												type="text"
-												placeholder="ex. 2nd, 6th etc."
-												onChange={this.onPoliceDistrictChange}
+											<StyledSelect
+												id="state-select"
+												name="selected-state"
+												value={selectedState}
+												onChange={this.onSelectedStateChange}
+												options={STATES}
+												autoFocus
+												simpleValue
+												clearable={true}
+												searchable={true}
 											/>
 										</Control>
 									</Field>
-								</div>
+								</FieldGroup>
 							</FieldGroupLocation>
-							Officer Name
+							<label>Officer Name</label>
 							<Field>
 								<Control>
 									<Input type="text" onChange={this.onOfficerNameChange} />
 								</Control>
 							</Field>
-							Victim Name
+							<label>Police District</label>
 							<Field>
 								<Control>
-									<Input type="text" onChange={this.onVictimNameChange} />
+									<Input
+										type="text"
+										placeholder="ex. 2nd, 6th etc."
+										onChange={this.onPoliceDistrictChange}
+									/>
 								</Control>
 							</Field>
 							<Field>
-								The Story
+								<label>The Story</label>
 								<Control>
 									<TextArea
 										placeholder={'Tell us more about what happened...'}
