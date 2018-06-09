@@ -1,10 +1,10 @@
 import React from 'react'
 import styled from 'styled-components'
 import { Field, TextArea, Control, Input, Button } from 'bloomer'
-import Cleave from 'cleave.js/react'
 import TermsOfAgreement from './TermsOfAgreement'
 import { STATES } from './states'
 import Select from 'react-select'
+//import Cleave from 'cleave.js/react'
 
 const StyledFormWrapper = styled.div`
 	display: flex;
@@ -180,15 +180,10 @@ class Form extends React.Component {
 							<Field>
 								<label>Phone Number</label>
 								<Control>
-									<Cleave
+									<Input
+										type="text"
 										name="phone-number"
-										className="input"
-										placeholder="XXX XXX XXXX"
-										options={{
-											blocks: [3, 3, 4],
-											delimeter: ' ',
-											numericOnly: true
-										}}
+										placeholder="XXX XXX XXX"
 										onChange={this.onPhoneNumberChange}
 									/>
 								</Control>
@@ -212,11 +207,10 @@ class Form extends React.Component {
 							<Field>
 								<label>Incident Date</label>
 								<Control>
-									<Cleave
-										className="input"
+									<Input
+										type="text"
 										name="incident-date"
 										placeholder="YYYY/MM/DD"
-										options={{ date: true, datePattern: ['Y', 'm', 'd'] }}
 										onChange={this.onDateChange}
 									/>
 								</Control>

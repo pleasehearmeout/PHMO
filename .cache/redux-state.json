@@ -1,22 +1,13 @@
 {
   "nodes": {
     "SitePage /dev-404-page/": {
-      "layout": "index",
-      "jsonName": "dev-404-page.json",
-      "internalComponentName": "ComponentDev404Page",
       "path": "/dev-404-page/",
-      "component": "/Users/ellalee/Workspace_projs/phmo/.cache/dev-404-page.js",
-      "componentChunkName": "component---cache-dev-404-page-js",
-      "context": {},
-      "pluginCreator___NODE": "Plugin dev-404-page",
-      "pluginCreatorId": "Plugin dev-404-page",
-      "componentPath": "/Users/ellalee/Workspace_projs/phmo/.cache/dev-404-page.js",
       "id": "SitePage /dev-404-page/",
       "parent": "SOURCE",
       "children": [],
       "internal": {
         "type": "SitePage",
-        "contentDigest": "c109f90ec7daa6ab7fa120f400cff637",
+        "contentDigest": "f91d29e10ba680b413138cf9ed86e655",
         "owner": "internal-data-bridge"
       }
     },
@@ -441,11 +432,13 @@
       "resolve": "/Users/ellalee/Workspace_projs/phmo",
       "id": "Plugin default-site-plugin",
       "name": "default-site-plugin",
-      "version": "97e87203517781716a1754903688d321",
+      "version": "40f08f1518a5fa0cce9559dd38886084",
       "pluginOptions": {
         "plugins": []
       },
-      "nodeAPIs": [],
+      "nodeAPIs": [
+        "modifyWebpackConfig"
+      ],
       "browserAPIs": [],
       "ssrAPIs": [],
       "pluginFilepath": "/Users/ellalee/Workspace_projs/phmo",
@@ -456,7 +449,7 @@
         "keywords": [
           "gatsby"
         ],
-        "author": "Cethy <charles-elie@cethyworks.com>",
+        "author": "",
         "license": "MIT",
         "dependencies": [
           {
@@ -500,6 +493,10 @@
             "version": "^5.2.0"
           },
           {
+            "name": "react-select",
+            "version": "^1.2.1"
+          },
+          {
             "name": "styled-components",
             "version": "^3.3.2"
           }
@@ -517,7 +514,7 @@
       "parent": "SOURCE",
       "children": [],
       "internal": {
-        "contentDigest": "ce3314d4dcaa4700254876ff8fb335f3",
+        "contentDigest": "658fb319c253eea9b401d3309057ed44",
         "type": "SitePlugin",
         "owner": "internal-data-bridge"
       }
@@ -526,16 +523,14 @@
       "siteMetadata": {
         "title": "Gatsby Default Starter"
       },
-      "port": "8000",
-      "host": "localhost",
       "pathPrefix": "",
       "polyfill": true,
-      "buildTime": "2018-06-09T18:00:59.986Z",
+      "buildTime": "2018-06-09T21:06:18.366Z",
       "id": "Site",
       "parent": "SOURCE",
       "children": [],
       "internal": {
-        "contentDigest": "277d4fb3551b77315df130bfd2e0858f",
+        "contentDigest": "0c7d03b7d985597450bde0872255255d",
         "type": "Site",
         "owner": "internal-data-bridge"
       }
@@ -556,7 +551,7 @@
       "children": [],
       "internal": {
         "type": "SitePage",
-        "contentDigest": "cb1cdc2f869c00a19d32818a9219f9a9",
+        "contentDigest": "81cc7a7a29b21766ab3c41a6b745d9be",
         "owner": "internal-data-bridge"
       }
     },
@@ -576,7 +571,7 @@
       "children": [],
       "internal": {
         "type": "SitePage",
-        "contentDigest": "642f634b86e2d4172c0f3024ed01117a",
+        "contentDigest": "9d93487abe8250eb4418f43ae97b22c9",
         "owner": "internal-data-bridge"
       }
     },
@@ -596,7 +591,7 @@
       "children": [],
       "internal": {
         "type": "SitePage",
-        "contentDigest": "95ba3d579479845cbff9a4eec572e3bd",
+        "contentDigest": "fb2234eba1163aed55a2aa215fa12921",
         "owner": "internal-data-bridge"
       }
     },
@@ -616,7 +611,7 @@
       "children": [],
       "internal": {
         "type": "SitePage",
-        "contentDigest": "4fec66614b34be1c4a7d271a113fc3d3",
+        "contentDigest": "f0a92c93c26debfe44d6afbb5ce56b20",
         "owner": "internal-data-bridge"
       }
     },
@@ -636,14 +631,14 @@
       "children": [],
       "internal": {
         "type": "SitePage",
-        "contentDigest": "5591bc775dc9a8575b71e758da3de3a2",
+        "contentDigest": "d7a0109e711f8fd91a3b4fcc44e99043",
         "owner": "internal-data-bridge"
       }
     }
   },
   "status": {
     "plugins": {},
-    "PLUGINS_HASH": "3010edfa501c9df95f7c6c200e11882f"
+    "PLUGINS_HASH": "c0fc593b4c025858ca30abea2180f6a1"
   },
   "componentDataDependencies": {
     "nodes": {},
