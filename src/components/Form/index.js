@@ -175,12 +175,15 @@ class Form extends React.Component {
 			city,
 			state,
 			officer,
-			story
+			story,
+			agreed
 		} = this.state
 
 		const errors = validator(name, email, date, city, state, officer, story)
 
-		const isDisabled = Object.keys(errors).some(x => errors[x])
+		const isDisabled = () => {
+			return Object.keys(errors).some(x => errors[x]) || !agreed
+		}
 
 		const shouldMarkError = field => {
 			const hasError = errors[field]
@@ -357,7 +360,7 @@ class Form extends React.Component {
 						</Field>
 						<Field isGrouped>
 							<Control>
-								<Button type="submit" isColor="primary">
+								<Button type="submit" isColor="primary" disabled={isDisabled()}>
 									Submit
 								</Button>
 							</Control>
