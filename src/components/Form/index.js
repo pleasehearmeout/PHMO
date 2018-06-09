@@ -171,6 +171,7 @@ class Form extends React.Component {
 								<Control>
 									<Input
 										type="text"
+										name="full-name"
 										placeholder="First Last"
 										onChange={this.onNameChange}
 									/>
@@ -180,6 +181,7 @@ class Form extends React.Component {
 								<label>Phone Number</label>
 								<Control>
 									<Cleave
+										name="phone-number"
 										className="input"
 										placeholder="XXX XXX XXXX"
 										options={{
@@ -196,6 +198,7 @@ class Form extends React.Component {
 								<Control>
 									<Input
 										type="text"
+										name="email"
 										placeholder="youremail@gmail.com"
 										onChange={this.onEmailChange}
 									/>
@@ -211,6 +214,7 @@ class Form extends React.Component {
 								<Control>
 									<Cleave
 										className="input"
+										name="incident-date"
 										placeholder="YYYY/MM/DD"
 										options={{ date: true, datePattern: ['Y', 'm', 'd'] }}
 										onChange={this.onDateChange}
@@ -222,7 +226,11 @@ class Form extends React.Component {
 									<label>City</label>
 									<Field>
 										<Control>
-											<Input type="text" onChange={this.onCityChange} />
+											<Input
+												type="text"
+												name="city"
+												onChange={this.onCityChange}
+											/>
 										</Control>
 									</Field>
 								</div>
@@ -232,7 +240,7 @@ class Form extends React.Component {
 										<Control>
 											<StyledSelect
 												id="state-select"
-												name="selected-state"
+												name="state"
 												value={selectedState}
 												onChange={this.onSelectedStateChange}
 												options={STATES}
@@ -248,7 +256,11 @@ class Form extends React.Component {
 							<label>Officer Name</label>
 							<Field>
 								<Control>
-									<Input type="text" onChange={this.onOfficerNameChange} />
+									<Input
+										type="text"
+										name="officer-name"
+										onChange={this.onOfficerNameChange}
+									/>
 								</Control>
 							</Field>
 							<label>Police District</label>
@@ -256,6 +268,7 @@ class Form extends React.Component {
 								<Control>
 									<Input
 										type="text"
+										name="police-district"
 										placeholder="ex. 2nd, 6th etc."
 										onChange={this.onPoliceDistrictChange}
 									/>
@@ -265,6 +278,7 @@ class Form extends React.Component {
 								<label>The Story</label>
 								<Control>
 									<TextArea
+										name="story"
 										placeholder={'Tell us more about what happened...'}
 										onChange={this.onStoryChange}
 									/>
