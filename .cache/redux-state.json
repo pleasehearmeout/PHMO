@@ -16,7 +16,7 @@
       "children": [],
       "internal": {
         "type": "SitePage",
-        "contentDigest": "40ce9634b65d16c9f44258b5435e6020",
+        "contentDigest": "5ca2da40a732e899017b795ca3d96780",
         "owner": "internal-data-bridge"
       }
     },
@@ -441,13 +441,11 @@
       "resolve": "/Users/ellalee/Workspace_projs/phmo",
       "id": "Plugin default-site-plugin",
       "name": "default-site-plugin",
-      "version": "40f08f1518a5fa0cce9559dd38886084",
+      "version": "87d164fe4ba310e7df47dde4de9d3efb",
       "pluginOptions": {
         "plugins": []
       },
-      "nodeAPIs": [
-        "modifyWebpackConfig"
-      ],
+      "nodeAPIs": [],
       "browserAPIs": [],
       "ssrAPIs": [],
       "pluginFilepath": "/Users/ellalee/Workspace_projs/phmo",
@@ -506,6 +504,10 @@
             "version": "^1.2.1"
           },
           {
+            "name": "react-text-mask",
+            "version": "^5.4.1"
+          },
+          {
             "name": "styled-components",
             "version": "^3.3.2"
           }
@@ -523,7 +525,7 @@
       "parent": "SOURCE",
       "children": [],
       "internal": {
-        "contentDigest": "658fb319c253eea9b401d3309057ed44",
+        "contentDigest": "47c8796e6e4990f41a50cfa9fb774ab2",
         "type": "SitePlugin",
         "owner": "internal-data-bridge"
       }
@@ -536,12 +538,12 @@
       "host": "localhost",
       "pathPrefix": "",
       "polyfill": true,
-      "buildTime": "2018-06-09T20:59:54.774Z",
+      "buildTime": "2018-06-09T21:40:20.417Z",
       "id": "Site",
       "parent": "SOURCE",
       "children": [],
       "internal": {
-        "contentDigest": "acb41d833420918e0885b8ebb3565590",
+        "contentDigest": "67c8088ec87150fa4f6574585bf3ceeb",
         "type": "Site",
         "owner": "internal-data-bridge"
       }
@@ -562,7 +564,7 @@
       "children": [],
       "internal": {
         "type": "SitePage",
-        "contentDigest": "2aab73e70009bc1485f21335c02ecc28",
+        "contentDigest": "db660119cf0c3e5d653e58af9ac934da",
         "owner": "internal-data-bridge"
       }
     },
@@ -582,7 +584,7 @@
       "children": [],
       "internal": {
         "type": "SitePage",
-        "contentDigest": "6531cb26bc0a9399238e2897bb376c15",
+        "contentDigest": "b7b4526c45ddc4efe887f91a9bd06b86",
         "owner": "internal-data-bridge"
       }
     },
@@ -602,7 +604,7 @@
       "children": [],
       "internal": {
         "type": "SitePage",
-        "contentDigest": "a1e852b50037fff5ce2b30c5e40f05f3",
+        "contentDigest": "98b7666b81d5c40c8b205da22f630d1b",
         "owner": "internal-data-bridge"
       }
     },
@@ -622,27 +624,7 @@
       "children": [],
       "internal": {
         "type": "SitePage",
-        "contentDigest": "e5b85c66fe5d23097f5474ef9adda82b",
-        "owner": "internal-data-bridge"
-      }
-    },
-    "SitePage /404.html": {
-      "layout": "index",
-      "jsonName": "404-html.json",
-      "internalComponentName": "Component404Html",
-      "path": "/404.html",
-      "component": "/Users/ellalee/Workspace_projs/phmo/src/pages/404.js",
-      "componentChunkName": "component---src-pages-404-js",
-      "context": {},
-      "pluginCreator___NODE": "Plugin prod-404",
-      "pluginCreatorId": "Plugin prod-404",
-      "componentPath": "/Users/ellalee/Workspace_projs/phmo/src/pages/404.js",
-      "id": "SitePage /404.html",
-      "parent": "SOURCE",
-      "children": [],
-      "internal": {
-        "type": "SitePage",
-        "contentDigest": "804230f5bde54d604f9fffde36254bc4",
+        "contentDigest": "285d377f8055e8596bd80f1b40c4bf71",
         "owner": "internal-data-bridge"
       }
     },
@@ -662,14 +644,34 @@
       "children": [],
       "internal": {
         "type": "SitePage",
-        "contentDigest": "53d26983224d5771bbc140edb0ee7d02",
+        "contentDigest": "5edde748e8bdf8be3bbf5358d86a2cae",
+        "owner": "internal-data-bridge"
+      }
+    },
+    "SitePage /404.html": {
+      "layout": "index",
+      "jsonName": "404-html.json",
+      "internalComponentName": "Component404Html",
+      "path": "/404.html",
+      "component": "/Users/ellalee/Workspace_projs/phmo/src/pages/404.js",
+      "componentChunkName": "component---src-pages-404-js",
+      "context": {},
+      "pluginCreator___NODE": "Plugin prod-404",
+      "pluginCreatorId": "Plugin prod-404",
+      "componentPath": "/Users/ellalee/Workspace_projs/phmo/src/pages/404.js",
+      "id": "SitePage /404.html",
+      "parent": "SOURCE",
+      "children": [],
+      "internal": {
+        "type": "SitePage",
+        "contentDigest": "3d0f4039b071c2959ee51e88ca7ef816",
         "owner": "internal-data-bridge"
       }
     }
   },
   "status": {
     "plugins": {},
-    "PLUGINS_HASH": "c0fc593b4c025858ca30abea2180f6a1"
+    "PLUGINS_HASH": "4dcfbd93b01cac2d576cc9a2a94e8682"
   },
   "componentDataDependencies": {
     "nodes": {},

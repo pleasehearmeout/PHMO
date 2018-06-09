@@ -17,8 +17,8 @@ exports.json = {
   "about.json": require("gatsby-module-loader?name=path---about!/Users/ellalee/Workspace_projs/phmo/.cache/json/about.json"),
   "index.json": require("gatsby-module-loader?name=path---index!/Users/ellalee/Workspace_projs/phmo/.cache/json/index.json"),
   "page-2.json": require("gatsby-module-loader?name=path---page-2!/Users/ellalee/Workspace_projs/phmo/.cache/json/page-2.json"),
-  "404-html.json": require("gatsby-module-loader?name=path---404-html!/Users/ellalee/Workspace_projs/phmo/.cache/json/404-html.json"),
-  "success.json": require("gatsby-module-loader?name=path---success!/Users/ellalee/Workspace_projs/phmo/.cache/json/success.json")
+  "success.json": require("gatsby-module-loader?name=path---success!/Users/ellalee/Workspace_projs/phmo/.cache/json/success.json"),
+  "404-html.json": require("gatsby-module-loader?name=path---404-html!/Users/ellalee/Workspace_projs/phmo/.cache/json/404-html.json")
 }
 
 exports.layouts = {

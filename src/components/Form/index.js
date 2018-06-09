@@ -4,7 +4,7 @@ import { Field, TextArea, Control, Input, Button } from 'bloomer'
 import TermsOfAgreement from './TermsOfAgreement'
 import { STATES } from './states'
 import Select from 'react-select'
-//import Cleave from 'cleave.js/react'
+import MaskedInput from 'react-text-mask'
 
 const StyledFormWrapper = styled.div`
 	display: flex;
@@ -181,11 +181,31 @@ class Form extends React.Component {
 							<Field>
 								<label>Phone Number</label>
 								<Control>
-									<Input
-										type="text"
+									<MaskedInput
+										mask={[
+											'(',
+											/[1-9]/,
+											/\d/,
+											/\d/,
+											')',
+											' ',
+											/\d/,
+											/\d/,
+											/\d/,
+											'-',
+											/\d/,
+											/\d/,
+											/\d/,
+											/\d/
+										]}
+										className="input"
 										name="phone-number"
-										placeholder="XXX XXX XXX"
-										onChange={this.onPhoneNumberChange}
+										guide={false}
+										id="my-input-id"
+										onBlur={() => {}}
+										onChange={() => {
+											this.onPhoneNumberChange
+										}}
 									/>
 								</Control>
 							</Field>
