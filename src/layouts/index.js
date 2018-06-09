@@ -36,7 +36,6 @@ const TemplateWrapper = ({ children }) => (
 			<HeroHeader>
 				<AppHeader />
 			</HeroHeader>
-
 			<StyledHeroBody>{children()}</StyledHeroBody>
 			<HeroFooter />
 		</Hero>

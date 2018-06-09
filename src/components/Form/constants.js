@@ -59,3 +59,20 @@ export const STATES = [
 	{ value: 'WI', label: 'Wisconsin' },
 	{ value: 'WY', label: 'Wyoming' }
 ]
+
+export const NUMBER = [
+	'(',
+	/[1-9]/,
+	/\d/,
+	/\d/,
+	')',
+	' ',
+	/\d/,
+	/\d/,
+	/\d/,
+	'-',
+	/\d/,
+	/\d/,
+	/\d/,
+	/\d/
+]

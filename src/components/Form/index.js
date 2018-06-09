@@ -2,9 +2,10 @@ import React from 'react'
 import styled from 'styled-components'
 import { Field, TextArea, Control, Input, Button } from 'bloomer'
 import TermsOfAgreement from './TermsOfAgreement'
-import { STATES } from './states'
+import { STATES, NUMBER } from './constants'
 import Select from 'react-select'
 import MaskedInput from 'react-text-mask'
+import { validator } from './validator'
 
 const StyledFormWrapper = styled.div`
 	display: flex;
@@ -75,7 +76,7 @@ class Form extends React.Component {
 
 		this.state = {
 			name: '',
-			phoneNumber: '',
+			number: '',
 			email: '',
 			date: '',
 			story: '',
@@ -84,7 +85,17 @@ class Form extends React.Component {
 			policeDistrict: '',
 			agreed: false,
 			isModalActive: false,
-			officerName: ''
+			officer: '',
+			touched: {
+				name: false,
+				number: false,
+				email: false,
+				date: false,
+				story: false,
+				city: false,
+				selectedState: false,
+				officer: false
+			}
 		}
 
 		this.onNameChange = this.onNameChange.bind(this)
@@ -98,6 +109,7 @@ class Form extends React.Component {
 		this.onPoliceDistrictChange = this.onPoliceDistrictChange.bind(this)
 		this.onTermsClick = this.onTermsClick.bind(this)
 		this.onOfficerNameChange = this.onOfficerNameChange.bind(this)
+		this.handleBlur = this.handleBlur.bind(this)
 	}
 
 	onNameChange(event) {
@@ -105,7 +117,7 @@ class Form extends React.Component {
 	}
 
 	onPhoneNumberChange(event) {
-		this.setState({ phoneNumber: event.target.rawValue })
+		this.setState({ number: event.target.rawValue })
 	}
 
 	onEmailChange(event) {
@@ -131,7 +143,8 @@ class Form extends React.Component {
 	onSelectedStateChange(newState) {
 		this.setState({ selectedState: newState })
 		if (newState) {
-			console.log(`Selected: ${newState}`)
+			console.log(`New: ${newState}`)
+			console.log(`Old: ${this.state.selectedState}`)
 		}
 	}
 
@@ -144,11 +157,37 @@ class Form extends React.Component {
 	}
 
 	onOfficerNameChange(event) {
-		this.setState({ officerName: event.target.value })
+		this.setState({ officer: event.target.value })
+	}
+
+	handleBlur = field => event => {
+		this.setState({
+			touched: { ...this.state.touched, [field]: true }
+		})
 	}
 
 	render() {
-		const { selectedState } = this.state
+		const {
+			name,
+			number,
+			email,
+			date,
+			city,
+			state,
+			officer,
+			story
+		} = this.state
+
+		const errors = validator(name, email, date, city, state, officer, story)
+
+		const isDisabled = Object.keys(errors).some(x => errors[x])
+
+		const shouldMarkError = field => {
+			const hasError = errors[field]
+			const shouldShow = this.state.touched[field]
+
+			return hasError ? shouldShow : false
+		}
 
 		return (
 			<StyledFormWrapper>
@@ -173,6 +212,8 @@ class Form extends React.Component {
 									<Input
 										type="text"
 										name="full-name"
+										className={shouldMarkError('name') ? 'error' : ''}
+										onBlur={this.handleBlur('name')}
 										placeholder="First Last"
 										onChange={this.onNameChange}
 									/>
@@ -182,27 +223,11 @@ class Form extends React.Component {
 								<label>Phone Number</label>
 								<Control>
 									<MaskedInput
-										mask={[
-											'(',
-											/[1-9]/,
-											/\d/,
-											/\d/,
-											')',
-											' ',
-											/\d/,
-											/\d/,
-											/\d/,
-											'-',
-											/\d/,
-											/\d/,
-											/\d/,
-											/\d/
-										]}
+										mask={NUMBER}
 										className="input"
 										name="phone-number"
 										guide={false}
 										id="my-input-id"
-										onBlur={() => {}}
 										onChange={() => {
 											this.onPhoneNumberChange
 										}}
@@ -217,6 +242,8 @@ class Form extends React.Component {
 										name="email"
 										placeholder="youremail@gmail.com"
 										onChange={this.onEmailChange}
+										className={shouldMarkError('email') ? 'error' : ''}
+										onBlur={this.handleBlur('email')}
 									/>
 								</Control>
 							</Field>
@@ -233,6 +260,8 @@ class Form extends React.Component {
 										name="incident-date"
 										placeholder="YYYY/MM/DD"
 										onChange={this.onDateChange}
+										className={shouldMarkError('date') ? 'error' : ''}
+										onBlur={this.handleBlur('date')}
 									/>
 								</Control>
 							</Field>
@@ -245,6 +274,8 @@ class Form extends React.Component {
 												type="text"
 												name="city"
 												onChange={this.onCityChange}
+												className={shouldMarkError('city') ? 'error' : ''}
+												onBlur={this.handleBlur('city')}
 											/>
 										</Control>
 									</Field>
@@ -254,9 +285,9 @@ class Form extends React.Component {
 									<Field>
 										<Control>
 											<StyledSelect
-												id="state-select"
-												name="state"
-												value={selectedState}
+												name="incident-state"
+												type="text"
+												value={this.state.selectedState}
 												onChange={this.onSelectedStateChange}
 												options={STATES}
 												autoFocus
@@ -275,6 +306,8 @@ class Form extends React.Component {
 										type="text"
 										name="officer-name"
 										onChange={this.onOfficerNameChange}
+										className={shouldMarkError('officer') ? 'error' : ''}
+										onBlur={this.handleBlur('officer')}
 									/>
 								</Control>
 							</Field>
@@ -296,6 +329,8 @@ class Form extends React.Component {
 										name="story"
 										placeholder={'Tell us more about what happened...'}
 										onChange={this.onStoryChange}
+										className={shouldMarkError('story') ? 'error' : ''}
+										onBlur={this.handleBlur('story')}
 									/>
 								</Control>
 							</Field>
