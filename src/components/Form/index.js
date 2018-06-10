@@ -5,12 +5,8 @@ import TermsOfAgreement from './TermsOfAgreement'
 import { STATES, NUMBER, DATE } from './constants'
 import MaskedInput from 'react-text-mask'
 import Autosuggest from 'react-autosuggest'
-import {
-	getSuggestionValue,
-	getSuggestions,
-	renderSuggestion,
-	validator
-} from './utils'
+import { getSuggestionValue, getSuggestions, validator } from './utils'
+import theme from './inputTheme.css'
 
 const StyledFormWrapper = styled.div`
 	display: flex;
@@ -70,6 +66,10 @@ const FieldGroupLine = styled.div`
 	border-bottom: 1px solid #efefef;
 	margin-bottom: 8px;
 `
+
+const renderSuggestion = suggestion => {
+	return <span>{suggestion.label}</span>
+}
 
 class Form extends React.Component {
 	constructor(props) {
@@ -219,7 +219,7 @@ class Form extends React.Component {
 		}
 
 		const inputProps = {
-			placeholder: 'Type c',
+			placeholder: '',
 			value: selectedState,
 			onChange: this.onSelectedStateChange
 		}

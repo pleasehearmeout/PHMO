@@ -39,7 +39,3 @@ export const getSuggestions = (value, usStates) => {
 export const getSuggestionValue = suggestion => {
 	return suggestion.label
 }
-
-export const renderSuggestion = suggestion => {
-	return <span>{suggestion.label}</span>
-}
