@@ -221,7 +221,8 @@ class Form extends React.Component {
 		const inputProps = {
 			placeholder: '',
 			value: selectedState,
-			onChange: this.onSelectedStateChange
+			onChange: this.onSelectedStateChange,
+			name: 'state'
 		}
 
 		return (
