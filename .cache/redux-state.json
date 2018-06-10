@@ -1,22 +1,13 @@
 {
   "nodes": {
     "SitePage /dev-404-page/": {
-      "layout": "index",
-      "jsonName": "dev-404-page.json",
-      "internalComponentName": "ComponentDev404Page",
       "path": "/dev-404-page/",
-      "component": "/Users/ellalee/Workspace_projs/phmo/.cache/dev-404-page.js",
-      "componentChunkName": "component---cache-dev-404-page-js",
-      "context": {},
-      "pluginCreator___NODE": "Plugin dev-404-page",
-      "pluginCreatorId": "Plugin dev-404-page",
-      "componentPath": "/Users/ellalee/Workspace_projs/phmo/.cache/dev-404-page.js",
       "id": "SitePage /dev-404-page/",
       "parent": "SOURCE",
       "children": [],
       "internal": {
         "type": "SitePage",
-        "contentDigest": "5ca2da40a732e899017b795ca3d96780",
+        "contentDigest": "f91d29e10ba680b413138cf9ed86e655",
         "owner": "internal-data-bridge"
       }
     },
@@ -468,10 +459,6 @@
             "version": "^0.6.2"
           },
           {
-            "name": "cleave.js",
-            "version": "^1.3.7"
-          },
-          {
             "name": "font-awesome",
             "version": "^4.7.0"
           },
@@ -494,6 +481,10 @@
           {
             "name": "gatsby-plugin-sass",
             "version": "1.0.19"
+          },
+          {
+            "name": "react-autosuggest",
+            "version": "^9.3.4"
           },
           {
             "name": "react-helmet",
@@ -534,16 +525,14 @@
       "siteMetadata": {
         "title": "Gatsby Default Starter"
       },
-      "port": "8000",
-      "host": "localhost",
       "pathPrefix": "",
       "polyfill": true,
-      "buildTime": "2018-06-09T21:40:20.417Z",
+      "buildTime": "2018-06-10T06:58:40.192Z",
       "id": "Site",
       "parent": "SOURCE",
       "children": [],
       "internal": {
-        "contentDigest": "67c8088ec87150fa4f6574585bf3ceeb",
+        "contentDigest": "1fae6a1aef04786d7d73cb520d338110",
         "type": "Site",
         "owner": "internal-data-bridge"
       }
@@ -564,7 +553,7 @@
       "children": [],
       "internal": {
         "type": "SitePage",
-        "contentDigest": "db660119cf0c3e5d653e58af9ac934da",
+        "contentDigest": "52e4eb840742798dd8c199dd37a4d3b9",
         "owner": "internal-data-bridge"
       }
     },
@@ -584,7 +573,7 @@
       "children": [],
       "internal": {
         "type": "SitePage",
-        "contentDigest": "b7b4526c45ddc4efe887f91a9bd06b86",
+        "contentDigest": "6bfa01e23b0805a9c738b05f697e9424",
         "owner": "internal-data-bridge"
       }
     },
@@ -604,7 +593,7 @@
       "children": [],
       "internal": {
         "type": "SitePage",
-        "contentDigest": "98b7666b81d5c40c8b205da22f630d1b",
+        "contentDigest": "e30071f02a5d47a90c9e3edb95525bc9",
         "owner": "internal-data-bridge"
       }
     },
@@ -624,7 +613,7 @@
       "children": [],
       "internal": {
         "type": "SitePage",
-        "contentDigest": "285d377f8055e8596bd80f1b40c4bf71",
+        "contentDigest": "013eb4793a103ade21149847c404bffb",
         "owner": "internal-data-bridge"
       }
     },
@@ -644,7 +633,7 @@
       "children": [],
       "internal": {
         "type": "SitePage",
-        "contentDigest": "5edde748e8bdf8be3bbf5358d86a2cae",
+        "contentDigest": "1b0fdd5d25dddb993ef57f586a6c1c9e",
         "owner": "internal-data-bridge"
       }
     },
@@ -664,21 +653,17 @@
       "children": [],
       "internal": {
         "type": "SitePage",
-        "contentDigest": "3d0f4039b071c2959ee51e88ca7ef816",
+        "contentDigest": "f44e8432df2d159ef42e48000d6d7791",
         "owner": "internal-data-bridge"
       }
     }
   },
   "status": {
     "plugins": {},
-    "PLUGINS_HASH": "4dcfbd93b01cac2d576cc9a2a94e8682"
+    "PLUGINS_HASH": "66f946d5a1e179aeb9d28e2d885b8343"
   },
   "componentDataDependencies": {
     "nodes": {},
-    "connections": {
-      "SitePage": [
-        "/dev-404-page/"
-      ]
-    }
+    "connections": {}
   }
 }

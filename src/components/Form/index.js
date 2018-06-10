@@ -3,9 +3,14 @@ import styled from 'styled-components'
 import { Field, TextArea, Control, Input, Button } from 'bloomer'
 import TermsOfAgreement from './TermsOfAgreement'
 import { STATES, NUMBER, DATE } from './constants'
-import Select from 'react-select'
 import MaskedInput from 'react-text-mask'
-import { validator } from './validator'
+import Autosuggest from 'react-autosuggest'
+import {
+	getSuggestionValue,
+	getSuggestions,
+	renderSuggestion,
+	validator
+} from './utils'
 
 const StyledFormWrapper = styled.div`
 	display: flex;
@@ -66,10 +71,6 @@ const FieldGroupLine = styled.div`
 	margin-bottom: 8px;
 `
 
-const StyledSelect = styled(Select)`
-	width: 200px;
-`
-
 class Form extends React.Component {
 	constructor(props) {
 		super(props)
@@ -86,6 +87,7 @@ class Form extends React.Component {
 			agreed: false,
 			isModalActive: false,
 			officer: '',
+			suggestions: [],
 			touched: {
 				name: false,
 				date: false,
@@ -110,6 +112,24 @@ class Form extends React.Component {
 		this.onTermsClick = this.onTermsClick.bind(this)
 		this.onOfficerNameChange = this.onOfficerNameChange.bind(this)
 		this.handleBlur = this.handleBlur.bind(this)
+		this.onSuggestionsFetchRequested = this.onSuggestionsFetchRequested.bind(
+			this
+		)
+		this.onSuggestionsClearRequested = this.onSuggestionsClearRequested.bind(
+			this
+		)
+	}
+
+	onSuggestionsFetchRequested = ({ value }) => {
+		this.setState({
+			suggestions: getSuggestions(value, STATES)
+		})
+	}
+
+	onSuggestionsClearRequested = () => {
+		this.setState({
+			suggestions: []
+		})
 	}
 
 	onNameChange(event) {
@@ -129,7 +149,6 @@ class Form extends React.Component {
 	}
 
 	onStoryChange(event) {
-		console.log(event.target.value)
 		this.setState({ story: event.target.value })
 	}
 
@@ -141,12 +160,8 @@ class Form extends React.Component {
 		this.setState({ city: event.target.value })
 	}
 
-	onSelectedStateChange(newState) {
-		this.setState({ selectedState: newState })
-		if (newState) {
-			console.log(`New: ${newState}`)
-			console.log(`Old: ${this.state.selectedState}`)
-		}
+	onSelectedStateChange(event, { newValue, method }) {
+		this.setState({ selectedState: newValue })
 	}
 
 	onPoliceDistrictChange(event) {
@@ -173,11 +188,12 @@ class Form extends React.Component {
 			date,
 			email,
 			city,
-			state,
+			selectedState,
 			officer,
 			story,
 			agreed,
-			number
+			number,
+			suggestions
 		} = this.state
 
 		const errors = validator(
@@ -185,7 +201,7 @@ class Form extends React.Component {
 			email,
 			date,
 			city,
-			state,
+			selectedState,
 			officer,
 			story,
 			number
@@ -200,6 +216,12 @@ class Form extends React.Component {
 			const shouldShow = this.state.touched[field]
 
 			return hasError ? shouldShow : false
+		}
+
+		const inputProps = {
+			placeholder: 'Type c',
+			value: selectedState,
+			onChange: this.onSelectedStateChange
 		}
 
 		return (
@@ -294,16 +316,17 @@ class Form extends React.Component {
 									<label>State</label>
 									<Field>
 										<Control>
-											<StyledSelect
-												name="incident-state"
-												type="text"
-												value={this.state.selectedState}
-												onChange={this.onSelectedStateChange}
-												options={STATES}
-												autoFocus
-												simpleValue
-												clearable={true}
-												searchable={true}
+											<Autosuggest
+												suggestions={suggestions}
+												onSuggestionsFetchRequested={
+													this.onSuggestionsFetchRequested
+												}
+												onSuggestionsClearRequested={
+													this.onSuggestionsClearRequested
+												}
+												getSuggestionValue={getSuggestionValue}
+												renderSuggestion={renderSuggestion}
+												inputProps={inputProps}
 											/>
 										</Control>
 									</Field>
