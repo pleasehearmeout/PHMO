@@ -6,6 +6,7 @@ import { STATES, NUMBER } from './constants'
 import Select from 'react-select'
 import MaskedInput from 'react-text-mask'
 import { validator } from './validator'
+import Datepicker from 'react-basic-datepicker'
 
 const StyledFormWrapper = styled.div`
 	display: flex;
@@ -90,7 +91,6 @@ class Form extends React.Component {
 				name: false,
 				number: false,
 				email: false,
-				date: false,
 				story: false,
 				city: false,
 				selectedState: false,
@@ -125,7 +125,8 @@ class Form extends React.Component {
 	}
 
 	onDateChange(event) {
-		this.setState({ date: event.target.value })
+		console.log(this.state.date)
+		this.setState({ date: event })
 	}
 
 	onStoryChange(event) {
@@ -171,7 +172,6 @@ class Form extends React.Component {
 			name,
 			number,
 			email,
-			date,
 			city,
 			state,
 			officer,
@@ -179,7 +179,7 @@ class Form extends React.Component {
 			agreed
 		} = this.state
 
-		const errors = validator(name, email, date, city, state, officer, story)
+		const errors = validator(name, email, city, state, officer, story)
 
 		const isDisabled = () => {
 			return Object.keys(errors).some(x => errors[x]) || !agreed
@@ -258,13 +258,11 @@ class Form extends React.Component {
 							<Field>
 								<label>Incident Date</label>
 								<Control>
-									<Input
-										type="text"
+									<Datepicker
 										name="incident-date"
+										dateFormat="YYYY/MM/DD"
 										placeholder="YYYY/MM/DD"
-										onChange={this.onDateChange}
-										className={shouldMarkError('date') ? 'error' : ''}
-										onBlur={this.handleBlur('date')}
+										handleDateChange={this.onDateChange}
 									/>
 								</Control>
 							</Field>
