@@ -2,11 +2,10 @@ import React from 'react'
 import styled from 'styled-components'
 import { Field, TextArea, Control, Input, Button } from 'bloomer'
 import TermsOfAgreement from './TermsOfAgreement'
-import { STATES, NUMBER } from './constants'
+import { STATES, NUMBER, DATE } from './constants'
 import Select from 'react-select'
 import MaskedInput from 'react-text-mask'
 import { validator } from './validator'
-import Datepicker from 'react-basic-datepicker'
 
 const StyledFormWrapper = styled.div`
 	display: flex;
@@ -89,6 +88,7 @@ class Form extends React.Component {
 			officer: '',
 			touched: {
 				name: false,
+				date: false,
 				number: false,
 				email: false,
 				story: false,
@@ -117,7 +117,7 @@ class Form extends React.Component {
 	}
 
 	onPhoneNumberChange(event) {
-		this.setState({ number: event.target.rawValue })
+		this.setState({ number: event.target.value })
 	}
 
 	onEmailChange(event) {
@@ -125,11 +125,11 @@ class Form extends React.Component {
 	}
 
 	onDateChange(event) {
-		console.log(this.state.date)
-		this.setState({ date: event })
+		this.setState({ date: event.target.value })
 	}
 
 	onStoryChange(event) {
+		console.log(event.target.value)
 		this.setState({ story: event.target.value })
 	}
 
@@ -170,16 +170,26 @@ class Form extends React.Component {
 	render() {
 		const {
 			name,
-			number,
+			date,
 			email,
 			city,
 			state,
 			officer,
 			story,
-			agreed
+			agreed,
+			number
 		} = this.state
 
-		const errors = validator(name, email, city, state, officer, story)
+		const errors = validator(
+			name,
+			email,
+			date,
+			city,
+			state,
+			officer,
+			story,
+			number
+		)
 
 		const isDisabled = () => {
 			return Object.keys(errors).some(x => errors[x]) || !agreed
@@ -227,13 +237,10 @@ class Form extends React.Component {
 								<Control>
 									<MaskedInput
 										mask={NUMBER}
-										className="input"
+										className={shouldMarkError('number') ? 'error' : 'input'}
+										onBlur={this.handleBlur('number')}
 										name="phone-number"
-										guide={false}
-										id="my-input-id"
-										onChange={() => {
-											this.onPhoneNumberChange
-										}}
+										onChange={this.onPhoneNumberChange}
 									/>
 								</Control>
 							</Field>
@@ -258,11 +265,13 @@ class Form extends React.Component {
 							<Field>
 								<label>Incident Date</label>
 								<Control>
-									<Datepicker
+									<MaskedInput
+										mask={DATE}
+										className={shouldMarkError('date') ? 'error' : 'input'}
+										onBlur={this.handleBlur('date')}
 										name="incident-date"
-										dateFormat="YYYY/MM/DD"
-										placeholder="YYYY/MM/DD"
-										handleDateChange={this.onDateChange}
+										placeholder="MM/DD/YYYY"
+										onChange={this.onDateChange}
 									/>
 								</Control>
 							</Field>
