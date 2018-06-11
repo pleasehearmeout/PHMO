@@ -222,7 +222,9 @@ class Form extends React.Component {
 			placeholder: '',
 			value: selectedState,
 			onChange: this.onSelectedStateChange,
-			name: 'state'
+			name: 'state',
+			className: shouldMarkError('selectedState') ? 'error' : 'input',
+			onBlur: this.handleBlur('selectedState')
 		}
 
 		return (

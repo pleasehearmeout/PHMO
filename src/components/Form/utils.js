@@ -3,7 +3,7 @@ export const validator = (
 	email,
 	date,
 	city,
-	state,
+	selectedState,
 	officer,
 	story,
 	number
@@ -12,7 +12,7 @@ export const validator = (
 		name: name == '',
 		city: city == '',
 		date: date == '',
-		state: state == '',
+		selectedState: selectedState == '',
 		officer: officer == '',
 		story: story == '',
 		email: email == '',
