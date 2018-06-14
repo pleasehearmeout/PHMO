@@ -298,7 +298,7 @@ class Form extends React.Component {
 									</Control>
 									{shouldMarkError('name') ? (
 										<ValidationMessage>
-											Please provide a full name
+											Please provide your full name
 										</ValidationMessage>
 									) : (
 										''
