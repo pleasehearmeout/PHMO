@@ -63,7 +63,7 @@ body
   background-color: $white
 
 .circular
-  animation: rotate 2s linear infinite
+  animation: rotate 2s ease-in-out infinite
   height: 40%
   transform-origin: center center
   width: 50%
@@ -87,7 +87,7 @@ body
 
 @keyframes dash
   0%
-    stroke-dasharray: 1, 200
+    stroke-dasharray: 70, 200
     stroke-dashoffset: 0
 
   50%
@@ -100,16 +100,14 @@ body
 
 
 @keyframes color
-  100%,
   0%
-    stroke: $red
-
-  40%
+    stroke: $green
+  25%
     stroke: $blue
 
-  66%
-    stroke: $green
-
-  80%,
-  90%
+  50%
+    stroke: $red
+  75%
     stroke: $yellow
+  100%
+    stroke: $green

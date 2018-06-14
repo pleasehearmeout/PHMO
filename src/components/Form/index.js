@@ -144,10 +144,9 @@ class Form extends React.Component {
 	}
 
 	componentDidMount() {
-		// setTimeout(() => {
-		// 	this.setState({ isLoading: false })
-		// }, 2000)
-		this.setState({ isLoading: false })
+		setTimeout(() => {
+			this.setState({ isLoading: false })
+		}, 1500)
 	}
 
 	onSuggestionsFetchRequested = ({ value }) => {
