@@ -16,7 +16,7 @@
       "children": [],
       "internal": {
         "type": "SitePage",
-        "contentDigest": "8f59673dfc172ea37eb15bebdf82fc13",
+        "contentDigest": "02bce8c67cd35e8f80ee33adac1c7459",
         "owner": "internal-data-bridge"
       }
     },
@@ -534,16 +534,16 @@
       "siteMetadata": {
         "title": "Gatsby Default Starter"
       },
-      "port": "8000",
+      "port": 8001,
       "host": "localhost",
       "pathPrefix": "",
       "polyfill": true,
-      "buildTime": "2018-06-10T08:24:15.501Z",
+      "buildTime": "2018-06-14T02:37:18.320Z",
       "id": "Site",
       "parent": "SOURCE",
       "children": [],
       "internal": {
-        "contentDigest": "d007162e4359d1301c3aacd450a13b53",
+        "contentDigest": "fcc33fb112592ed26a5dfeabb3baa91f",
         "type": "Site",
         "owner": "internal-data-bridge"
       }
@@ -564,7 +564,7 @@
       "children": [],
       "internal": {
         "type": "SitePage",
-        "contentDigest": "1d908553e4a3050a21b43fb9bbb759ea",
+        "contentDigest": "131a0b5e987d14433cd89d91fb84ef03",
         "owner": "internal-data-bridge"
       }
     },
@@ -584,7 +584,7 @@
       "children": [],
       "internal": {
         "type": "SitePage",
-        "contentDigest": "11fe6d4e8b25254b534d1823b6aef870",
+        "contentDigest": "71bd4988304c76615ac5a9ef3392517d",
         "owner": "internal-data-bridge"
       }
     },
@@ -604,7 +604,7 @@
       "children": [],
       "internal": {
         "type": "SitePage",
-        "contentDigest": "dccbfe4672a02e379ea54c9a414e8204",
+        "contentDigest": "62dd30254831ebf30f99a6af26c045ea",
         "owner": "internal-data-bridge"
       }
     },
@@ -624,7 +624,7 @@
       "children": [],
       "internal": {
         "type": "SitePage",
-        "contentDigest": "31ee9f2ca842239fa5288ba1068bd9fd",
+        "contentDigest": "e651d224d1453a056e308c103ef9e2eb",
         "owner": "internal-data-bridge"
       }
     },
@@ -644,7 +644,7 @@
       "children": [],
       "internal": {
         "type": "SitePage",
-        "contentDigest": "55a78cf46062da88152463f8f8fc4c4d",
+        "contentDigest": "5f8d8aee4758a56faaf05598d9ed8604",
         "owner": "internal-data-bridge"
       }
     },
@@ -664,7 +664,7 @@
       "children": [],
       "internal": {
         "type": "SitePage",
-        "contentDigest": "11d8484a8080e67ac7e858d06d3cf0e7",
+        "contentDigest": "bda20752e4a8824d62b5f5c19b34161a",
         "owner": "internal-data-bridge"
       }
     }
