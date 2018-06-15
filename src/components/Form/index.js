@@ -65,9 +65,7 @@ const FieldGroup = styled.div`
 
 const FieldGroupLocation = styled.div`
 	display: flex;
-	flex-direction: row;
-	justify-content: flex-start;
-	margin-bottom: 15px;
+	width: 90%;
 `
 
 const FieldGroupTitle = styled.div`
@@ -367,57 +365,51 @@ class Form extends React.Component {
 										''
 									)}
 								</Field>
-								<FieldGroupLocation>
-									<div>
-										<label>City</label>
-										<Field>
-											<Control>
-												<Input
-													type="text"
-													name="city"
-													onChange={this.onCityChange}
-													className={shouldMarkError('city') ? 'error' : ''}
-													onBlur={this.handleBlur('city')}
-												/>
-											</Control>
-											{shouldMarkError('city') ? (
-												<ValidationMessage>
-													Please provide the incident city
-												</ValidationMessage>
-											) : (
-												''
-											)}
-										</Field>
-									</div>
-									<FieldGroup>
-										<label>State</label>
-										<Field>
-											<Control>
-												<Autosuggest
-													suggestions={suggestions}
-													onSuggestionsFetchRequested={
-														this.onSuggestionsFetchRequested
-													}
-													onSuggestionsClearRequested={
-														this.onSuggestionsClearRequested
-													}
-													getSuggestionValue={getSuggestionValue}
-													renderSuggestion={renderSuggestion}
-													inputProps={inputProps}
-												/>
-											</Control>
-											{shouldMarkError('selectedState') ? (
-												<ValidationMessage>
-													Please provide the incident state
-												</ValidationMessage>
-											) : (
-												''
-											)}
-										</Field>
-									</FieldGroup>
-								</FieldGroupLocation>
-								<label>Officer Name</label>
 								<Field>
+									<label>City</label>
+									<Control>
+										<Input
+											type="text"
+											name="city"
+											onChange={this.onCityChange}
+											className={shouldMarkError('city') ? 'error' : ''}
+											onBlur={this.handleBlur('city')}
+										/>
+									</Control>
+									{shouldMarkError('city') ? (
+										<ValidationMessage>
+											Please provide the incident city
+										</ValidationMessage>
+									) : (
+										''
+									)}
+								</Field>
+								<Field>
+									<label>State</label>
+									<Control>
+										<Autosuggest
+											suggestions={suggestions}
+											onSuggestionsFetchRequested={
+												this.onSuggestionsFetchRequested
+											}
+											onSuggestionsClearRequested={
+												this.onSuggestionsClearRequested
+											}
+											getSuggestionValue={getSuggestionValue}
+											renderSuggestion={renderSuggestion}
+											inputProps={inputProps}
+										/>
+									</Control>
+									{shouldMarkError('selectedState') ? (
+										<ValidationMessage>
+											Please provide the incident state
+										</ValidationMessage>
+									) : (
+										''
+									)}
+								</Field>
+								<Field>
+									<label>Officer Name</label>
 									<Control>
 										<Input
 											type="text"
