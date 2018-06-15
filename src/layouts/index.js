@@ -31,7 +31,9 @@ const StyledHeroBody = styled.div`
 
 const TemplateWrapper = ({ children }) => (
 	<StyledTitleWrapper>
-		<Helmet title="Please Hear Me Out" />
+		<Helmet title="Please Hear Me Out">
+			<link rel="shortcut icon" type="image/png" href="/static/favicon.png" />
+		</Helmet>
 		<Hero isFullHeight isColor="dark" isSize="large">
 			<HeroHeader>
 				<AppHeader />

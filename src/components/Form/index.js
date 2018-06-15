@@ -28,7 +28,7 @@ const StyledBox = styled.div`
 	color: #4a4a4a;
 	display: block;
 	padding: 1.25rem;
-	width: 65%;
+	width: 85%;
 `
 
 const StyledTitleWrapper = styled.div`
