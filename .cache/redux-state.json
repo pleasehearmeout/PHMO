@@ -608,46 +608,6 @@
         "owner": "internal-data-bridge"
       }
     },
-    "SitePage /page-2/": {
-      "layout": "index",
-      "jsonName": "page-2.json",
-      "internalComponentName": "ComponentPage2",
-      "path": "/page-2/",
-      "component": "/Users/ellalee/Workspace_projs/phmo/src/pages/page-2.js",
-      "componentChunkName": "component---src-pages-page-2-js",
-      "context": {},
-      "pluginCreator___NODE": "Plugin component-page-creator",
-      "pluginCreatorId": "Plugin component-page-creator",
-      "componentPath": "/Users/ellalee/Workspace_projs/phmo/src/pages/page-2.js",
-      "id": "SitePage /page-2/",
-      "parent": "SOURCE",
-      "children": [],
-      "internal": {
-        "type": "SitePage",
-        "contentDigest": "e651d224d1453a056e308c103ef9e2eb",
-        "owner": "internal-data-bridge"
-      }
-    },
-    "SitePage /success/": {
-      "layout": "index",
-      "jsonName": "success.json",
-      "internalComponentName": "ComponentSuccess",
-      "path": "/success/",
-      "component": "/Users/ellalee/Workspace_projs/phmo/src/pages/success.js",
-      "componentChunkName": "component---src-pages-success-js",
-      "context": {},
-      "pluginCreator___NODE": "Plugin component-page-creator",
-      "pluginCreatorId": "Plugin component-page-creator",
-      "componentPath": "/Users/ellalee/Workspace_projs/phmo/src/pages/success.js",
-      "id": "SitePage /success/",
-      "parent": "SOURCE",
-      "children": [],
-      "internal": {
-        "type": "SitePage",
-        "contentDigest": "5f8d8aee4758a56faaf05598d9ed8604",
-        "owner": "internal-data-bridge"
-      }
-    },
     "SitePage /404.html": {
       "layout": "index",
       "jsonName": "404-html.json",
@@ -665,6 +625,26 @@
       "internal": {
         "type": "SitePage",
         "contentDigest": "bda20752e4a8824d62b5f5c19b34161a",
+        "owner": "internal-data-bridge"
+      }
+    },
+    "SitePage /how-it-works/": {
+      "layout": "index",
+      "jsonName": "how-it-works.json",
+      "internalComponentName": "ComponentHowItWorks",
+      "path": "/how-it-works/",
+      "component": "/Users/ellalee/Workspace_projs/phmo/src/pages/how-it-works.js",
+      "componentChunkName": "component---src-pages-how-it-works-js",
+      "context": {},
+      "pluginCreator___NODE": "Plugin component-page-creator",
+      "pluginCreatorId": "Plugin component-page-creator",
+      "componentPath": "/Users/ellalee/Workspace_projs/phmo/src/pages/how-it-works.js",
+      "id": "SitePage /how-it-works/",
+      "parent": "SOURCE",
+      "children": [],
+      "internal": {
+        "type": "SitePage",
+        "contentDigest": "538451c6cd2b1c1a31882fc4fda8157f",
         "owner": "internal-data-bridge"
       }
     }

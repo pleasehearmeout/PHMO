@@ -262,7 +262,7 @@ class Form extends React.Component {
 		) : (
 			<div>
 				<StyledTitleWrapper>
-					<Title isSize={1}>Help us help you get justice.</Title>
+					<Title isSize="1">Help us help you get justice.</Title>
 				</StyledTitleWrapper>
 				<StyledStatementWrapper>
 					<Title isSize="6">Report police misconduct to us.</Title>

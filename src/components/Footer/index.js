@@ -7,9 +7,7 @@ const AppFooter = () => (
 			<Content>
 				<Columns>
 					<Column>
-						<p>
-							Made with<Icon hasTextColor="danger" className="fa fa-heart" />
-						</p>
+						<p />
 					</Column>
 				</Columns>
 				<Content isSize="small">

@@ -28,24 +28,17 @@
         "path": "/"
     },
     {
-        "componentChunkName": "component---src-pages-page-2-js",
-        "layout": "layout---index",
-        "layoutComponentChunkName": "component---src-layouts-index-js",
-        "jsonName": "page-2.json",
-        "path": "/page-2/"
-    },
-    {
-        "componentChunkName": "component---src-pages-success-js",
-        "layout": "layout---index",
-        "layoutComponentChunkName": "component---src-layouts-index-js",
-        "jsonName": "success.json",
-        "path": "/success/"
-    },
-    {
         "componentChunkName": "component---src-pages-404-js",
         "layout": "layout---index",
         "layoutComponentChunkName": "component---src-layouts-index-js",
         "jsonName": "404-html.json",
         "path": "/404.html"
+    },
+    {
+        "componentChunkName": "component---src-pages-how-it-works-js",
+        "layout": "layout---index",
+        "layoutComponentChunkName": "component---src-layouts-index-js",
+        "jsonName": "how-it-works.json",
+        "path": "/how-it-works/"
     }
 ]
